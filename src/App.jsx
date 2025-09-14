@@ -1,18 +1,36 @@
 export default function App() {
-
   return (
-   <div className="min-h-screen w-screen flex flex-col">
+    <div className="min-h-screen w-screen flex flex-col bg-white">
       {/* ชื่อ Application */}
-      <header className="bg-emerald-800 text-white p-4" >
-        <h1>AN318 React Class</h1>
-        </header>
+      <header className="p-4 mt-12">
+        <h1 className="text-4xl font-bold">My React Application</h1>
+      </header>
+
       <div className="flex flex-1">
         {/* หน้าจอหลัก */}
-        <main className="flex-1 p-6 bg-white">
-          <h2 className="text-2x1 font-semibold mb-4">Start Code Here</h2>
+        <main className="flex-1 p-6">
+          {/* โปรไฟล์ */}
+          <div className="mb-6">
+            <p>Profile Name : 65111505 น.ส.สุพิชชา สุวรรณมาลี</p>
+            <button className="px-4 py-2 bg-gray-100 rounded mt-2">(ชมพู)</button>
+          </div>
+
+          <div className="mb-6">
+            <p>Profile Name : 65111505 น.ส.สุพิชชา สุวรรณมาลี</p>
+            <button className="px-4 py-2 bg-gray-100 rounded mt-2">(ชมพู)</button>
+          </div>
+
+          <div className="mb-6">
+            <p>Profile Name : 65111505 น.ส.สุพิชชา สุวรรณมาลี</p>
+            <button className="px-4 py-2 bg-gray-100 rounded mt-2">(ชมพู)</button>
+          </div>
+
+          {/* Copyright */}
+          <p className="mt-12 font-semibold">
+            Copyright ANT DPU 2025 All rights reserved.
+          </p>
         </main>
       </div>
-      <footer className="bg-gray-700 text-white p-4 text-center">2025 Copyright</footer>
     </div>
-  )
+  );
 }
