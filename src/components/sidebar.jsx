@@ -1,14 +1,29 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function Sidebar() {
+export default function sidebar() {
   return (
-    <div className="w-64 bg-gray-800 text-white h-screen p-4">
-      <h1 className="text-xl font-bold mb-6">My App</h1>
-      <nav className="flex flex-col space-y-3">
-        <Link to="/" className="hover:bg-gray-700 p-2 rounded">Home</Link>
-        <Link to="/about" className="hover:bg-gray-700 p-2 rounded">About</Link>
-        <Link to="/contact" className="hover:bg-gray-700 p-2 rounded">Contact</Link>
-      </nav>
-    </div>
+    <aside className="w-48 bg-slate-700 text-white p-4 flex flex-col gap-2">
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          `block px-3 py-2 rounded hover:bg-slate-600 ${
+            isActive ? "bg-slate-500 font-bold" : ""
+          }`
+        }
+      >
+        🏠 หน้าหลัก
+      </NavLink>
+
+      <NavLink
+        to="/how"
+        className={({ isActive }) =>
+          `block px-3 py-2 rounded hover:bg-slate-600 ${
+            isActive ? "bg-slate-500 font-bold" : ""
+          }`
+        }
+      >
+        📘 วิธีใช้งาน
+      </NavLink>
+    </aside>
   );
 }
